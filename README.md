@@ -10,7 +10,7 @@ To install, use composer:
 
 ## Authorization Code Flow
 ```
-$provider = new \Smachi\OAuth2\Client\Provider\Envato([
+$provider = new \Alimir\OAuth2\Client\Provider\Envato([
     'clientId'          => '{envato-client-id}',
     'clientSecret'      => '{envato-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',

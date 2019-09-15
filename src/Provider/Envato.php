@@ -1,6 +1,6 @@
 <?php
 
-namespace Smachi\OAuth2\Client\Provider;
+namespace Alimir\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
@@ -164,7 +164,7 @@ class Envato extends AbstractProvider {
 	 * @param array       $response
 	 * @param AccessToken $token
 	 *
-	 * @return \Smachi\OAuth2\Client\Provider\EnvatoUser
+	 * @return \Alimir\OAuth2\Client\Provider\EnvatoUser
 	 */
 	protected function createResourceOwner( array $response, AccessToken $token ) {
 		$user = new EnvatoUser( $response );

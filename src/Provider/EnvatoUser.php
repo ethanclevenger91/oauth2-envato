@@ -1,5 +1,5 @@
 <?php
-namespace Smachi\OAuth2\Client\Provider;
+namespace Alimir\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 

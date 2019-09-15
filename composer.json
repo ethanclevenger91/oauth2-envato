@@ -1,12 +1,10 @@
 {
-	"name": "smachi/oauth2-envato",
+	"name": "Alimir/oauth2-envato",
 	"description": "Envato OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Salva Machí",
-			"email": "salvamb@gmail.com",
-			"homepage": "https://github.com/smachi"
+			"homepage": "https://github.com/Alimir"
 		}
 	],
 	"keywords": [
@@ -26,7 +24,7 @@
 	"minimum-stability": "dev",
 	"autoload": {
 		"psr-4": {
-			"Smachi\\OAuth2\\Client\\": "src/"
+			"Alimir\\OAuth2\\Client\\": "src/"
 		}
 	}
 }
