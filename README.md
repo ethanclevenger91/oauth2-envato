@@ -5,7 +5,7 @@
 
 To install, use composer:
 
-``` composer require smachi/envato-oauth2-provider ```
+```composer require alimir/oauth2-envato```
 
 
 ## Authorization Code Flow
