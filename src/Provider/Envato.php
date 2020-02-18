@@ -50,21 +50,6 @@ class Envato extends AbstractProvider {
 		return "$this->apiDomain/v1/market/private/user/username.json";
 	}
 
-	/**
-	 * Get provider url to fetch user email
-	 *
-	 * @return string
-	 */
-	public function getResourceOwnerEmailUrl() {
-		return "$this->apiDomain/v1/market/private/user/email.json";
-	}
-
-	/**
-	 * Get provider url to fetch the user purchases list
-	 *
-	 * @param array $extraParams
-	 * @return string
-	 */
 	public function getResourceOwnerPurchasesUrl($extraParams = []) {
 
 		$purchasesEndpoint = "$this->apiDomain/v3/market/buyer/list-purchases";
@@ -88,54 +73,6 @@ class Envato extends AbstractProvider {
 	 */
 	protected function getDefaultScopes() {
 		return [ ];
-	}
-
-
-	/**
-	 * Requests and returns the resource owner of given access token.
-	 *
-	 * @param AccessToken $token
-	 * @param string $endpoint
-	 * @param array $extraParams
-	 *
-	 * @return ResourceOwnerInterface
-	 */
-	public function getResourceOwner( AccessToken $token, $endpoint, $extraParams = [] ) {
-		$response = $this->fetchResourceOwnerDetails( $token, $endpoint, $extraParams );
-
-		return $this->createResourceOwner( $response, $token );
-	}
-
-	/**
-	 * Requests resource owner details.
-	 *
-	 * @param AccessToken $token
-	 * @param string $endpoint
-	 * @param array $extraParams
-	 *
-	 * @return mixed
-	 */
-	protected function fetchResourceOwnerDetails( AccessToken $token, $endpoint, $extraParams = [] ) {
-
-		switch ( $endpoint ) {
-
-			case 'username':
-				$url = $this->getResourceOwnerDetailsUrl( $token );
-		        break;
-
-			case 'email':
-				$url = $this->getResourceOwnerEmailUrl();
-				break;
-
-			case 'purchases':
-				$url = $this->getResourceOwnerPurchasesUrl($extraParams);
-				break;
-
-		}
-
-		$request = $this->getAuthenticatedRequest( self::METHOD_GET, $url, $token );
-
-		return $this->getResponse( $request );
 	}
 
 	/**
