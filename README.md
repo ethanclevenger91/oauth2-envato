@@ -5,7 +5,7 @@
 
 To install, use composer:
 
-```composer require alimir/oauth2-envato```
+```composer require alimir/oauth2-envato:dev-master```
 
 
 ## Authorization Code Flow
