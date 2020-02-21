@@ -88,7 +88,7 @@ class Envato extends AbstractProvider {
 	protected function checkResponse( ResponseInterface $response, $data ) {
 		if ( $response->getStatusCode() >= 400 ) {
 			throw new IdentityProviderException(
-				$data['message'] ?: $response->getReasonPhrase(),
+				$data['message'] ?? $response->getReasonPhrase(),
 				$response->getStatusCode(),
 				$response
 			);
